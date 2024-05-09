@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Réservation d'Hôtel</title>
+</head>
+<body>
+<h1>Réservation d'Hôtel</h1>
+<label for="checkinDate">Date d'arrivée :</label>
+<input type="date" id="checkinDate">
+
+<label for="checkoutDate">Date de départ :</label>
+<input type="date" id="checkoutDate">
+
+<label for="numRooms">Nombre de chambres :</label>
+<input type="number" id="numRooms" min="1" max="10" value="1">
+
+<button onclick="makeReservation()">Réserver</button>
+
+<div id="reservationResult"></div>
+
+<script>
+    function makeReservation() {
+        const checkinDate = document.getElementById('checkinDate').value;
+        const checkoutDate = document.getElementById('checkoutDate').value;
+        const numRooms = document.getElementById('numRooms').value;
+
+        // Ici, vous pouvez implémenter la logique de réservation, comme l'envoi des données au serveur, etc.
+        // Pour cet exemple, nous allons simplement afficher les informations de réservation.
+        const reservationInfo = `
+            <p>Date d'arrivée : ${checkinDate}</p>
+            <p>Date de départ : ${checkoutDate}</p>
+            <p>Nombre de chambres : ${numRooms}</p>
+            <p>Votre réservation a été effectuée avec succès !</p>
+        `;
+
+        document.getElementById('reservationResult').innerHTML = reservationInfo;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>JavaScript Output</title>
+</head>
+
+<body>
+	<h1>GeeksforGeeks</h1>
+	<h2>
+		JavaScript Display Possibilities
+		Using appendChild()
+	</h2>
+	<p id="GFG"></p>
+	<!-- Script to use window.alert() -->
+	<script>
+        var outputContainer = document.createElement("div");
+ 
+        var userInput = window.prompt('Enter something:');
+        var output = document.createElement("p");
+        output.appendChild(document
+                           .createTextNode('You entered: ' + userInput));
+        outputContainer.appendChild(output);
+ 
+        document.body.appendChild(outputContainer);
+	</script>
+</body>
+
+</html>
